@@ -6,57 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Demo For FE</title>
 </head>
 
 <body>
     <header>
-        <img class="logo" src="logo.jpg" alt="logo">
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="submenu"><a href="#">Portfolio</a>
-                    <ul class="drop">
-                        <li>Link 1</li>
-                        <li>Link 2</li>
-                        <li>Link 3</li>
-                    </ul>
-                </li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <nav>
+            <img class="logo" src="logo.jpg" alt="logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-navicon"></i>
+            </label>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li class="submenu"><a href="#">PORTFOLIO<i class="fa fa-angle-down"></i></a>
+                        <ul class="drop">
+                            <li><a href="#">Link 1</a> </li>
+                            <li><a href="#">Link 2</a> </li>
+                            <li><a href="#">Link 3</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            </div>
         </nav>
     </header>
     <section class="container">
+
         <div class="box">
             <h1>Create and grow your website fast, with Neve</h1>
-            <p>Programmatically work but low hanging fruit so new economy cross-pollination. Quick sync economy onward
+            <p>Programmatically work but low hanging fruit so new economy cross-pollination. Quick sync economy
+                onward
                 and upward.</p>
         </div>
+
         <div class="btn-area">
             <p><a class="learn-more" href="#">LEARN MORE</a></p>
             <p><a class="hire-us" href="#">HIRE US</a></p>
         </div>
     </section>
-    <article class="col">
-        <div>
-            <img class="check" src="check.png" alt="check">
+    <article class="services">
+        <div class="card">
+            <img class="check-img" src="check.png" alt="check">
             <h2>
                 Fixed Price Projects
             </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quo sit.</p>
         </div>
-        <div>
-            <img class="check" src="check.png" alt="check">
+        <div class="card">
+            <img class="check-img" src="check.png" alt="check">
             <h2>On budget and on time</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, pariatur laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, pariatur .</p>
         </div>
-        <div>
-            <img class="check" src="check.png" alt="check">
+        <div class="card">
+            <img class="check-img" src="check.png" alt="check">
             <h2>Fast work turnaround</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, ad eius!</p>
         </div>

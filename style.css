@@ -1,34 +1,50 @@
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  width: auto;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Public Sans", sans-serif;
+  /* font-family: 'Georama', sans-serif; */
 }
-
+body {
+  height: 150vh;
+}
 /* header */
 header {
   box-sizing: border-box;
   display: flex;
-  padding: 20px 0px 10px 30px;
-  margin: 10px 0px 0px 10px;
-  width: 97vw;
   justify-content: space-between;
+  padding: 20px 10px 10px 30px;
+  width: auto;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
+.checkbtn {
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
 }
 
 ul li a {
   box-sizing: border-box;
   padding: 10px;
-  font-size: 25px;
+  font-size: 18px;
   color: black;
   font-style: none;
-  text-transform: capitalize;
+  text-transform: capitalize !important;
   text-decoration: none;
-  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 1.2px;
 }
 
 .logo {
-  display: flex;
   cursor: pointer;
 }
 
@@ -44,37 +60,41 @@ ul li a {
   box-shadow: 10px 3px 15px rgb(136, 131, 131);
   border-radius: 10px;
 }
-
+nav {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 /* submenu */
 
 ul li ul {
   display: none;
 }
 
-ul li ul li {
+ul ul li {
   width: 100px;
   padding: 10px;
 }
 
 .submenu:hover ul {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  margin: 15px;
-}
-
-/* .submenu ul:hover {
-  background: white;
-  color: black;
-  padding: 10px;
+  background-color: white;
+  margin: 8px;
+  padding: 20px;
   box-shadow: 10px 3px 15px rgb(136, 131, 131);
-  border-radius: 10px;
-} */
-
-
-ul li ul li:hover {
+  border-radius: 8px;
+}
+ul li ul li a{
+  margin: 30px 0px;
+}
+ul li ul li a:hover {
   background: white;
   color: black;
   padding: 10px;
@@ -87,24 +107,32 @@ ul li ul li:hover {
 .container {
   box-sizing: border-box;
   background: url("bgimg.jpg") no-repeat center;
+  background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100vw;
+  width: auto;
   height: 80vh;
-  background-size: cover;
 }
+
 .box {
   box-sizing: border-box;
-  width: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .box h1 {
   font-size: 4rem;
+  width: 80%;
 }
 .box p {
+  margin: 20px;
   font-size: 19px;
+  width: 73%;
 }
 .btn-area {
   display: flex;
@@ -140,31 +168,181 @@ ul li ul li:hover {
 
 /* article */
 
-.col {
+.services {
   box-sizing: border-box;
   display: flex;
-  justify-content: space-around;
-  word-wrap: break-word;
-  width: 100vw;
+  flex-direction: row;
+  justify-content: space-evenly;
   margin-top: 50px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
-.col div {
-  width: 30vw;
-  text-overflow: ellipsis;
-  padding: 25px;
+.check-img {
+  height: 40px;
+  width: 40px;
 }
 
-.col div:hover {
-  box-shadow: 10px 6px 92px -20px #111;
+.card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  word-wrap: break-word;
 }
 
-.check {
-  width: 4vw;
-  height: 3rem;
+.card h2 {
+  letter-spacing: 1px;
 }
 
-.col h2 {
-  font-size: 28px;
+/* For Tablet Device */
+
+@media screen and (max-width: 768px) {
+  /* header */
+
+  header {
+    padding-right: 20px;
+  }
+
+  .menu a {
+    font-size: 10px;
+  }
+
+  /* section */
+  .container {
+    height: auto;
+  }
+
+  .box h1 {
+    margin-top: 30px;
+    font-size: 35px;
+    width: 80%;
+  }
+  .box p {
+    font-size: 13px;
+  }
+
+  /* services */
+
+  .services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+  }
+
+  .card {
+    width: 250px;
+    padding: 0;
+  }
+
+  .card h2 {
+    text-align: center;
+    font-size: 17px;
+  }
+  .card p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .check-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* For Mobile Device */
+
+@media screen and (max-width: 450px) {
+ 
+ 
+  header {
+    height: 60px;
+    padding: 30px;
+  }
+  .checkbtn {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+  }
+
+  .menu ul li {
+    margin: 30px 0;
+  }
+  .menu ul li a {
+    font-size: 20px;
+    padding: 10px;
+    margin: 30px;
+  }
+
+  .menu ul li ul li {
+    margin: 0;
+    width: 200px;
+  }
+
+  .menu ul ul {
+    display: none;
+  }
+  #check:checked ~ .menu {
+    left: 0;
+    scroll-behavior: none;
+  }
+
+  .container {
+    width: auto;
+    height: auto;
+  }
+  .box {
+    width: auto;
+  }
+
+  .box h1 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+  }
+
+  .box p {
+    font-size: 0.7rem;
+  }
+
+  .btn-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px 40px 40px;
+  }
+  .btn-area p {
+    margin: 20px;
+  }
+
+  .learn-more,
+  .hire-us {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .services {
+    margin: 0;
+  }
+
+  .card {
+    padding: 30px;
+  }
 }
