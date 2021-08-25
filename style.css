@@ -272,7 +272,7 @@ ul li ul li a:hover {
   .checkbtn {
     display: block;
   }
-  
+
   .menu {
     position: fixed;
     width: 100%;
@@ -356,5 +356,6 @@ ul li ul li a:hover {
 
   .card {
     padding: 30px;
+    
   }
 }
