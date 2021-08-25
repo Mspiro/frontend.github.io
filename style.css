@@ -194,6 +194,11 @@ ul li ul li a:hover {
   letter-spacing: 1px;
 }
 
+.card:hover {
+  box-shadow: 10px 3px 15px rgb(136, 131, 131);
+  border-radius: 10px;
+}
+
 /* For Tablet Device */
 
 @media screen and (max-width: 768px) {
