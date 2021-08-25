@@ -261,10 +261,6 @@ ul li ul li a:hover {
 
 @media screen and (max-width: 450px) {
  
- body{
-   overflow: scroll;
- }
-
   header {
     height: 60px;
     padding: 30px;
@@ -317,6 +313,10 @@ ul li ul li a:hover {
     overflow: hidden;
   }
 
+  #check:focus body{
+    overflow: hidden;
+  }
+
   .container {
     width: auto;
     height: auto;
@@ -356,6 +356,6 @@ ul li ul li a:hover {
 
   .card {
     padding: 30px;
-    
+
   }
 }
