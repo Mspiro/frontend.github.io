@@ -261,7 +261,10 @@ ul li ul li a:hover {
 
 @media screen and (max-width: 450px) {
  
- 
+ body{
+   overflow: scroll;
+ }
+
   header {
     height: 60px;
     padding: 30px;
@@ -307,7 +310,10 @@ ul li ul li a:hover {
   }
   #check:checked ~ .menu {
     left: 0;
-    scroll-behavior: none;
+  }
+
+  #check:checked ~ body {
+    overflow: hidden;
   }
 
   .container {
