@@ -309,14 +309,10 @@ ul li ul li a:hover {
     left: 0;
   }
 
-  #check:checked ~ body {
+  .scroll-now{
     overflow: hidden;
   }
-
-  #check:focus body{
-    overflow: hidden;
-  }
-
+  
   .container {
     width: auto;
     height: auto;
