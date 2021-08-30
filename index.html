@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,18 +20,22 @@
             <label for="check" class="checkbtn">
                 <i class="fa fa-navicon"></i>
             </label>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li class="submenu"><a href="#">PORTFOLIO<i class="fa fa-angle-down"></i></a>
-                        <ul class="drop">
-                            <li><a href="#">Link 1</a> </li>
-                            <li><a href="#">Link 2</a> </li>
-                            <li><a href="#">Link 3</a> </li>
+            <div class="menu">  
+                <ul class="menu-items">
+                    <li class="item"><a href="#"><i class="fa fa-home"></i> HOME<span id="notification" class="notification">10</span></a>
+                    </li>
+                    <li class="item"><a href="#"><i class="fa fa-user"></i> ABOUT US</a></li>
+                    <li class="item" id="dropdown"><a href="#"><i class="fa fa-briefcase"></i> PORTFOLIO<i class="fa fa-angle-down" id="plus"></i></a>
+                        <ul class="drop" id="drop">
+                            <li class="item link"><a href="#"><i class="fa fa-id-card"></i> Link 1</a> </li>
+                            <li class="item link"><a href="#"><i class="fa fa-id-card"></i> Link 2</a> </li>
+                            <li class="item link"><a href="#"><i class="fa fa-id-card"></i> Link 3</a> </li>
                         </ul>
                     </li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li class="item" id="contact"><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+                    <Footer class="footer" id="footer">
+                        <div>Footer</div>
+                    </Footer>
                 </ul>
             </div>
             </div>
@@ -71,12 +74,9 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, ad ei us!</p>
         </div>
     </article>
-    <script>
-        const checkbox = document.querySelector('#check')        
-        checkbox.addEventListener("click", function () {
-            document.body.classList.toggle("scroll-now");
-        })
-    </script>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>
